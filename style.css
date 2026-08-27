@@ -1,0 +1,119 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --font-family: DM Mono, serif;
+    --Ink-black: #0A0A0A;
+    --Paper-white: #FFFFFF;
+    --Gold-accent: #C9A227;
+    --Muted-grey: #6B6B6B;
+}
+
+
+body{
+    width: 100%;
+    height:100%;
+    font-family: var(--font-family);
+}
+
+
+.container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 18px;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+}
+
+.quote-block{
+    background-color: var(--Ink-black);
+    border-radius: 10px;
+    margin-top: 50px;
+    padding: 12px;
+    margin-bottom: 32px;
+}
+
+.quote-block .date{
+    color: var(--Gold-accent);
+    margin-bottom: 12px;
+    font-size: 0.6rem;
+}
+
+.quote-block .quote{
+    font-size: 0.8rem;
+    color: var(--Paper-white);
+    font-weight: 400;
+    font-style: italic;
+    margin-bottom: 18px;
+}
+
+.quote-block .author{
+    color: var(--Muted-grey);
+    font-weight: 300;
+    font-size: 0.875rem;
+    margin-bottom: 18px;
+}
+
+textarea{
+    background-color: var(--Muted-grey);
+    color: var(--Ink-black);
+    width: 100%;
+    padding: 8px;
+    font-size: 0.7rem;
+    border-radius: 6px;
+    margin-bottom: 6px;
+}
+
+textarea::placeholder{
+    color: var(--Ink-black);
+    opacity: 1;
+}
+
+.save{
+    display: flex;
+    justify-content: end;
+    margin-top: 6px;
+}
+
+.save-btn{
+    all: unset;
+    background-color: var(--Gold-accent);
+    border-radius: 6px;
+    font-size: 0.8rem;
+    padding: 3px;
+    text-align: center;
+    font-weight: 500;
+}
+
+.history{
+    margin-bottom: 32px;
+    border-bottom: 3px solid var(--Gold-accent);
+}
+
+.prev-quote-1, .prev-quote-2, .prev-quote-3{
+    border-top: 1px solid var(--Muted-grey);
+    border-bottom: 1px solid var(--Muted-grey);
+    border-right: 1px solid var(--Muted-grey);
+    margin-bottom: 18px;
+    height: 100px;
+    border-left: 4px solid var(--Gold-accent);
+    border-radius: 12px;
+    padding: 12px;
+    font-size: 0.8rem;
+}
+
+.card-footer{
+    display: flex;
+    gap: 12px;
+    margin-top: 2px;
+    color: var(--Muted-grey);
+    
+}
+
+
+
