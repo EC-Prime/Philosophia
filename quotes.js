@@ -366,6 +366,3 @@ const qoutes = [
   { id: 365, text: `Character is built in the repetition of small acts of courage.`, author: "Seneca" }
 ];
 
-function{
-     
-}
