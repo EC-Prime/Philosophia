@@ -113,7 +113,7 @@ textarea::placeholder{
     padding: 12px;
     font-size: 0.8rem;
     background-color: rgba(201, 162, 39, 0.3);
-    box-shadow: 1px 3px 1px black;
+    box-shadow: 2px 3px 1px black;
 }
 
 .prev-quote-1:hover, .prev-quote-2:hover, .prev-quote-3:hover{
@@ -130,6 +130,10 @@ textarea::placeholder{
 
 p.author{
     font-style: oblique;
+}
+
+p.quote{
+    font-weight: bold;
 }
 
 
