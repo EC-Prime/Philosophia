@@ -23,8 +23,8 @@ Built as a portfolio project to practice core JavaScript (DOM manipulation, loca
 No build tools or dependencies — just open `index.html` in a browser.
 
 ```bash
-git clone https://github.com/EC-Prime/stoic-journal.git
-cd stoic-journal
+git clone https://github.com/EC-Prime/Philosophia.git
+cd Philosophia
 open index.html
 ```
 
