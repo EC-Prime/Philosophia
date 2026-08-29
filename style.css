@@ -117,7 +117,8 @@ textarea::placeholder{
 }
 
 .prev-quote-1:hover, .prev-quote-2:hover, .prev-quote-3:hover{
-    transform: scale(1.2);
+    transform: scale(1.1);
+    transition: 0.5s ease;
 }
 
 .card-footer{
