@@ -38,7 +38,6 @@ stoic-journal/
 └── app.js            # app logic (today's quote, save, render, edit)
 ```
 
-## Status
 
 ## Screenshot
 
@@ -46,6 +45,7 @@ stoic-journal/
   <img src="screenshot.png">
 </p>
 
+## Status
 🚧 In progress — built milestone by milestone. See commit history for build order.
 
 ## Author
