@@ -42,8 +42,8 @@ stoic-journal/
 
 ## Screenshot
 
-<p>
-  <img src="">
+<p align="center">
+  <img src="screenshot.png">
 </p>
 
 🚧 In progress — built milestone by milestone. See commit history for build order.
