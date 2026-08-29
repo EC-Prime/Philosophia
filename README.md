@@ -47,7 +47,3 @@ stoic-journal/
 
 ## Status
 🚧 In progress — built milestone by milestone. See commit history for build order.
-
-## Author
-
-Built by [EC](https://github.com/EC-Prime).
