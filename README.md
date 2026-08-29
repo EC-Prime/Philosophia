@@ -31,7 +31,7 @@ open index.html
 ## Project structure
 
 ```
-stoic-journal/
+Philosophia/
 ├── index.html      # page structure
 ├── style.css        # black / white / gold styling
 ├── quotes.js         # static pool of quotes
