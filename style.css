@@ -17,6 +17,7 @@ body{
     width: 100%;
     height:100%;
     font-family: var(--font-family);
+    background-color: rgba(141, 138, 138, 0.4);
 }
 
 
@@ -113,6 +114,10 @@ textarea::placeholder{
     font-size: 0.8rem;
     background-color: rgba(201, 162, 39, 0.3);
     box-shadow: 1px 3px 1px black;
+}
+
+.prev-quote-1:hover, .prev-quote-2:hover, .prev-quote-3:hover{
+    transform: scale(1.2);
 }
 
 .card-footer{
