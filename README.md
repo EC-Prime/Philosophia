@@ -1,6 +1,6 @@
 # Philosophia
 
-A daily reflection app. Each day shows a philosopher's quote — you write a short journal entry responding to it, and it saves to a growing history you can revisit and edit.
+A daily reflection app. Each day shows a philosopher's quote, you write a short journal entry responding to it, and it saves to a growing history you can revisit and edit.
 
 Built as a portfolio project to practice core JavaScript (DOM manipulation, localStorage, array/object handling) before moving on to React.
 
