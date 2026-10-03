@@ -20,9 +20,6 @@ function renderTodayCard(quote){
     author.textContent = quote.author;
 }
 
-const quote = getTodaysQuote();
-renderTodayCard(quote);
-
 let saveBtn =document.querySelector('.save-btn');
 let Reflection =document.querySelector('#reflection-input');
 
@@ -30,12 +27,67 @@ function handleSave(){
     let reflectToday = Reflection.value;
 
        let entry = {
-    reflection: reflectToday,
-    quoteId: quote.id,
-    date: "27 August 2026"
-  };
+            reflection: reflectToday,
+            quoteId: quote.id,
+            date: "27 August 2026"
+        };
 
   console.log(entry);
+
+    let entries = getEntries();
+    entries.push(entry);
+    localStorage.setItem("entries", JSON.stringify(entries));
 }
 
+function getEntries() {
+  let retrieveQ = localStorage.getItem("entries");
+  if (retrieveQ === null) {
+    return [];
+  } else {
+    return JSON.parse(retrieveQ);
+  }
+}
 saveBtn.addEventListener('click', handleSave);
+
+function renderHistory(){
+    let entries = getEntries();
+    const list = document.querySelector(".prev-quotes");
+
+    if(entries.length === 0){
+      list.textContent = "No entries yet."  
+      return;
+    }
+    
+    for(let entry of entries){
+        let matchedQuote =  quotes.find(q => q.id === entry.quoteId);
+
+        let row = document.createElement("div");
+        row.className = "prev-quote"; // or whatever class you want each row to have
+
+        let quoteText = document.createElement("p");
+        quoteText.className = "quote";
+        quoteText.textContent = matchedQuote.text;
+
+        let footer = document.createElement("div");
+        footer.className = "card-footer";
+
+        let authorText = document.createElement("p");
+        authorText.className = "author";
+        authorText.textContent = matchedQuote.author;
+
+        let dateText = document.createElement("p");
+        dateText.className = "date";
+        dateText.textContent = entry.date;
+
+        footer.appendChild(authorText);
+        footer.appendChild(dateText);
+
+        row.appendChild(quoteText);
+        row.appendChild(footer);
+
+        list.appendChild(row);
+    }
+}
+const quote = getTodaysQuote();
+renderTodayCard(quote);
+renderHistory();

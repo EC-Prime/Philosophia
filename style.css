@@ -86,7 +86,7 @@ textarea::placeholder{
 }
 
 .save-btn{
-    all: unset;
+    
     background-color: var(--Gold-accent);
     border-radius: 6px;
     font-size: 0.8rem;
@@ -102,7 +102,7 @@ textarea::placeholder{
     border-bottom: 3px solid var(--Gold-accent);
 }
 
-.prev-quote-1, .prev-quote-2, .prev-quote-3{
+.prev-quote-1, .prev-quote-2, .prev-quote-3, .prev-quote{
     border-top: 1px solid var(--Muted-grey);
     border-bottom: 1px solid var(--Muted-grey);
     border-right: 1px solid var(--Muted-grey);
@@ -116,7 +116,7 @@ textarea::placeholder{
     box-shadow: 2px 4px 1px black;
 }
 
-.prev-quote-1:hover, .prev-quote-2:hover, .prev-quote-3:hover{
+.prev-quote-1:hover, .prev-quote-2:hover, .prev-quote-3:hover, .prev-quote:hover{
     transform: scale(1.1);
     transition: 0.2s ease;
     cursor: pointer;
