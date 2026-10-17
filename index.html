@@ -5,54 +5,66 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap" rel="stylesheet">
     <title>Philosophia</title>
 </head>
 <body>
-    <div class="container">--
-        <h1 class="heading">Philosophia</h1>
-        
+
+    <!-- ── Hero background layer ──────────────────────────── -->
+    <div id="hero-bg" aria-hidden="true">
+        <div class="hero-slide active" style="background-image: url('images/wanderer.jpg')"></div>
+        <div class="hero-slide"        style="background-image: url('images/samurai.jpg')"></div>
+        <div class="hero-slide"        style="background-image: url('images/knight-sunset.jpg')"></div>
+        <div class="hero-slide"        style="background-image: url('images/knight-cliff.jpg')"></div>
+        <div id="hero-overlay"></div>
+        <canvas id="rain-canvas"></canvas>
+    </div>
+
+    <!-- Hidden YouTube player (audio only) -->
+    <div id="yt-player-wrap" aria-hidden="true"></div>
+
+    <!-- Audio toggle button -->
+    <button id="audio-toggle" title="Toggle ambient audio" aria-label="Toggle ambient audio">
+        <svg id="icon-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/>
+            <line x1="23" y1="9" x2="17" y2="15"/>
+            <line x1="17" y1="9" x2="23" y2="15"/>
+        </svg>
+        <svg id="icon-playing" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none">
+            <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/>
+            <path d="M19.07 4.93a10 10 0 0 1 0 14.14"/>
+            <path d="M15.54 8.46a5 5 0 0 1 0 7.07"/>
+        </svg>
+    </button>
+
+    <!-- ── Content ────────────────────────────────────────── -->
+    <div class="container">
+        <header>
+            <h1 class="heading">Philosophia</h1>
+        </header>
+
         <div class="quote-block">
             <p class="date">TODAY, 26 AUGUST 2026</p>
             <p class="quote">"You have power over your mind not outside events. <br>Realize this and you will find strength"</p>
             <h3 class="author">~Marcus Aurelius</h3>
             <textarea name="" id="reflection-input" placeholder="What does this mean to you today?"></textarea>
-            <br>
             <div class="save">
                 <button class="save-btn">Save Entry</button>
             </div>
         </div>
 
-        <h3 class="history">History</h3>
-        <div class="prev-quotes">
-            <div class="prev-quote-1">
-                <p class="quote">"He who fears death will never do anything worthy of a man who is alive."</p>
-                <div class="card-footer">
-                    <p class="author">Seneca</p>
-                    <p class="date">23 August 2026</p>
-                </div>
-            </div>
-
-            <div class="prev-quote-2">
-                <p class="quote">"Vanity of vanity is all vanities."</p>
-                <div class="card-footer">
-                    <p class="author">Ecclesiastes</p>
-                    <p class="date">22 August 2026</p>
-                </div>
-                
-            </div>
-
-            <div class="prev-quote-3">
-                <p class="quote">"Without music, life would be a mistake."</p>
-                <div class="card-footer">
-                    <p class="author">Nietzsche</p>
-                    <p class="date">21 August 2026</p>
-                </div>
-            </div>
-        </div>
+        <section class="history-section">
+            <h3 class="history">History</h3>
+            <div class="prev-quotes"></div>
+        </section>
     </div>
-</body>
+
 <script src="quotes.js"></script>
 <script src="app.js"></script>
+<script src="hero.js"></script>
+<script src="https://www.youtube.com/iframe_api"></script>
+<script src="audio.js"></script>
+<script src="typing-sfx.js"></script>
+</body>
 </html>

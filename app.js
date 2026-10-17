@@ -11,7 +11,7 @@ function getTodaysQuote(){
 
 function renderTodayCard(quote){
     let date = document.querySelector('.quote-block .date');
-    date.textContent = "TODAY, 27 AUGUST 2026";
+    date.textContent = "TODAY"+ " - " + getTodayString().toLocaleUpperCase();
 
     let todayQuote = document.querySelector('.quote-block .quote');
     todayQuote .textContent = quote.text;
@@ -29,7 +29,7 @@ function handleSave(){
        let entry = {
             reflection: reflectToday,
             quoteId: quote.id,
-            date: "27 August 2026"
+            date: getTodayString()
         };
 
   console.log(entry);
@@ -37,6 +37,9 @@ function handleSave(){
     let entries = getEntries();
     entries.push(entry);
     localStorage.setItem("entries", JSON.stringify(entries));
+    Reflection.value = "";
+    renderHistory();
+    
 }
 
 function getEntries() {
@@ -52,6 +55,7 @@ saveBtn.addEventListener('click', handleSave);
 function renderHistory(){
     let entries = getEntries();
     const list = document.querySelector(".prev-quotes");
+    list.innerHTML = "";
 
     if(entries.length === 0){
       list.textContent = "No entries yet."  
@@ -86,8 +90,25 @@ function renderHistory(){
         row.appendChild(footer);
 
         list.appendChild(row);
+
+        let reflectionText = document.createElement("p");
+        reflectionText.className = "reflection";
+        reflectionText.textContent = entry.reflection;
+        row.appendChild(reflectionText);
+
+        row.addEventListener("click", function() {
+          row.classList.toggle("expanded");
+        });
+       
+
+
     }
+}
+
+const getTodayString = () =>{
+  return new Date().toLocaleDateString("en-GB", { day: "numeric", month: "long", year: "numeric" })
 }
 const quote = getTodaysQuote();
 renderTodayCard(quote);
 renderHistory();
+
