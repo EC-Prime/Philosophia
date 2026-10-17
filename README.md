@@ -59,6 +59,14 @@ Philosophia/
 
 ---
 
+<<<<<<< HEAD
 ## 📝 License
 
+=======
+## 📁 Screenshot
+<p><img src = "new-UI.png"></p>
+
+## 📝 License
+
+>>>>>>> 987a18678890e5105077f4f489437fca3259da4f
 Open source and available under the [MIT License](LICENSE).
